@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Naomi Osaka</title>
+    <style>
+        /* Estilos para simular un documento PDF */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a0dad, #8a2be2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .pdf-document {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 25mm;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #6a0dad;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #6a0dad;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 16px;
+            font-style: italic;
+        }
+        
+        .photo-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .photo-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #6a0dad;
+            object-fit: cover;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            color: #6a0dad;
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e6e6e6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .info-value {
+            color: #333;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, #f9f5ff, #e6e6fa);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #6a0dad;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6a0dad;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .achievement-list {
+            list-style: none;
+            margin-left: 20px;
+        }
+        
+        .achievement-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .achievement-list li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+            color: #6a0dad;
+        }
+        
+        .grand-slam-list {
+            list-style: none;
+            margin-left: 20px;
+        }
+        
+        .grand-slam-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .grand-slam-list li:before {
+            content: "🎾";
+            position: absolute;
+            left: 0;
+            color: #6a0dad;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 80px;
+            color: rgba(106, 13, 173, 0.1);
+            z-index: -1;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .pdf-document {
+                box-shadow: none;
+                width: 100%;
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-document">
+        <div class="watermark">NAOMI OSAKA</div>
+        
+        <div class="header">
+            <h1>Naomi Osaka</h1>
+            <p>Tenista Profesional • Cuatro veces Campeona de Grand Slam • Activista</p>
+        </div>
+        
+        <div class="photo-section">
+            <img src="https://www.wtatennis.com/images/players/origin/121263.jpg" alt="Naomi Osaka">
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Información Personal</h2>
+            <div class="info-grid">
+                <div class="info-label">Fecha de Nacimiento:</div>
+                <div class="info-value">16 de octubre de 1997 (27 años)</div>
+                
+                <div class="info-label">Lugar de Nacimiento:</div>
+                <div class="info-value">Chūō-ku, Osaka, Japón</div>
+                
+                <div class="info-label">Nacionalidad:</div>
+                <div class="info-value">Japonesa</div>
+                
+                <div class="info-label">Residencia:</div>
+                <div class="info-value">Beverly Hills, California, EE.UU.</div>
+                
+                <div class="info-label">Altura:</div>
+                <div class="info-value">1.80 m</div>
+                
+                <div class="info-label">Peso:</div>
+                <div class="info-value">69 kg</div>
+                
+                <div class="info-label">Brazo Hábil:</div>
+                <div class="info-value">Diestra (revés a dos manos)</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Estadísticas Destacadas</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Títulos Grand Slam</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Títulos WTA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">N° 1 Mundial</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">$21M+</div>
+                    <div class="stat-label">Premios en Torneos</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Títulos de Grand Slam</h2>
+            <ul class="grand-slam-list">
+                <li><strong>US Open 2018:</strong> Derrotó a Serena Williams (6-2, 6-4)</li>
+                <li><strong>Abierto de Australia 2019:</strong> Derrotó a Petra Kvitová (7-6, 5-7, 6-4)</li>
+                <li><strong>US Open 2020:</strong> Derrotó a Victoria Azarenka (1-6, 6-3, 6-3)</li>
+                <li><strong>Abierto de Australia 2021:</strong> Derrotó a Jennifer Brady (6-4, 6-3)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Logros Destacados</h2>
+            <ul class="achievement-list">
+                <li>Primera tenista japonesa en ganar un Grand Slam individual</li>
+                <li>Primera tenista asiática en alcanzar el N° 1 del ranking WTA</li>
+                <li>Encendido del pebetero en los Juegos Olímpicos de Tokio 2021</li>
+                <li>Ganadora del Premio Laureus a la Deportista del Año 2021</li>
+                <li>Nombrada en la lista TIME 100 de personas más influyentes</li>
+                <li>Premio ESPY a la Mejor Deportista Femenina Internacional</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Actividades y Reconocimientos</h2>
+            <ul class="achievement-list">
+                <li><strong>Activismo:</strong> Portavoz del movimiento Black Lives Matter</li>
+                <li><strong>Salud Mental:</strong> Defensora de la salud mental en el deporte</li>
+                <li><strong>Filantropía:</strong> Fundadora de Play Academy con Nike</li>
+                <li><strong>Moda:</strong> Colaboraciones con Louis Vuitton y Nike</li>
+                <li><strong>Medios:</strong> Nombrada una de las atletas más influyentes del mundo</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Documento generado el 2025 | Daysi Britos</p>
+            <p>Currículum Vitae - Naomi Osaka | Información actualizada a 2024</p>
+        </div>
+    </div>
+</body>
+</html>
