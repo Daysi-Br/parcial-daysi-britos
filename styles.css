@@ -81,7 +81,8 @@ body {
 
 .hero-image img {
     max-width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -126,32 +127,3 @@ body {
     padding: 12px 24px;
     background-color: #6a0dad;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.btn-1 {
-    animation-name: pulse;
-}
-
-.btn-2 {
-    animation-name: bounce;
-}
-
-.btn-3 {
-    animation-name: shake;
-}
-
-.btn-4 {
-    animation-name: flash;
-}
-
-.btn-5 {
-    animation-name: swing;
-}
-
-.animated-btn
